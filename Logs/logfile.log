@@ -1,0 +1,17 @@
+2022-03-26 17:54:07 INFO  publicServices.ConnectionService:getInstance:37 - 1
+2022-03-26 17:54:08 ERROR publicServices.ConnectionService:<init>:27 - Ошибка подключения к БД
+java.sql.SQLSyntaxErrorException: Unknown database 'smarthome'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at publicServices.ConnectionService.<init>(ConnectionService.java:25)
+	at publicServices.ConnectionService.getInstance(ConnectionService.java:38)
+	at UserService.MySqlConnectionUserService.getUser(MySqlConnectionUserService.java:12)
+	at UserService.UserService.getUser(UserService.java:25)
+	at Starter.main(Starter.java:10)
+2022-03-26 17:54:49 INFO  Starter:main:12 - Пользователь найден : Никита
