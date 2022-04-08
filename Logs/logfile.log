@@ -1908,3 +1908,21 @@
 2022-04-01 14:39:36 INFO  Tasks.TemperatureMonitoring:run:32 - Окно Закрыто
 2022-04-01 14:39:36 INFO  Tasks.TemperatureMonitoring:run:34 - Температура в комнате больше 30 и окно закрыто
 2022-04-01 14:39:36 INFO  Deviсes.AirСonditionerDeviсe:on:15 - Кондиционер включен
+2022-04-04 23:37:03 INFO  Starter:main:24 - Пользователь найден : Никита
+2022-04-04 23:37:03 INFO  Tasks.TemperatureMonitoring:run:30 - Температура = 91.95995264408452
+2022-04-04 23:37:03 INFO  Tasks.TemperatureMonitoring:run:31 - Окно Закрыто
+2022-04-04 23:37:03 INFO  Tasks.TemperatureMonitoring:run:33 - Температура в комнате больше 30 и окно закрыто
+2022-04-04 23:37:03 INFO  Deviсes.AirСonditionerDeviсe:on:18 - Кондиционер включен
+2022-04-04 23:37:03 INFO  Starter:main:46 - Устройств в памяти: 0
+2022-04-04 23:37:03 INFO  Starter:main:51 - Устройств в памяти: 0
+2022-04-04 23:37:40 INFO  Starter:main:24 - Пользователь найден : Никита
+2022-04-04 23:37:40 INFO  Tasks.TemperatureMonitoring:run:30 - Температура = 4.898088227036357
+2022-04-04 23:37:40 INFO  Tasks.TemperatureMonitoring:run:31 - Окно Открыто
+2022-04-04 23:37:40 INFO  Tasks.TemperatureMonitoring:run:39 - Нормальное состояние
+2022-04-04 23:37:40 INFO  Tasks.TemperatureMonitoring:run:30 - Температура = 72.21280318713083
+2022-04-04 23:37:40 INFO  Tasks.TemperatureMonitoring:run:31 - Окно Закрыто
+2022-04-04 23:37:40 INFO  Tasks.TemperatureMonitoring:run:33 - Температура в комнате больше 30 и окно закрыто
+2022-04-04 23:37:40 INFO  Deviсes.AirСonditionerDeviсe:on:18 - Кондиционер включен
+2022-04-04 23:37:40 INFO  Starter:main:46 - Устройств в памяти: 0
+2022-04-04 23:37:40 INFO  Starter:main:51 - Устройств в памяти: 2
+2022-04-04 23:37:40 INFO  Starter:main:53 - Устройств в памяти: 1

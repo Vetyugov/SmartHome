@@ -1,11 +1,11 @@
+import Commands.CmAddToList;
+import Commands.CommandsHandler;
 import Detectors.TemperatureSensor;
 import Detectors.Types.AnalogTypeSensor;
 import Detectors.Types.DigitalTypeSensor;
 import Detectors.Types.SwitchTypeSensor;
 import Detectors.WindowOpenCloseSensor;
-import Deviсes.AirСonditionerDeviсe;
-import Deviсes.OnOffTypeDevices;
-import Deviсes.Status;
+import Deviсes.*;
 import Tasks.TemperatureMonitoring;
 import UserService.UserService;
 
@@ -31,7 +31,7 @@ public class Starter {
         SwitchTypeSensor windowOpenCloseDigitalSensor = new SwitchTypeSensor(new WindowOpenCloseSensor());
 
         //Управляемые устройства
-        AirСonditionerDeviсe airConditioner = new AirСonditionerDeviсe();
+        AirСonditionerDeviсe airConditioner = (AirСonditionerDeviсe) DeviceFactory.getInstance().createDevice(DeviceTypes.AIR_CONDITIONER);
 
         try {
             Thread temperatureMonitoring = new TemperatureMonitoring(temperatureAnalogSensor, windowOpenCloseDigitalSensor, airConditioner);
@@ -40,6 +40,17 @@ public class Starter {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+
+        DeviceHandler deviceHandler = new DeviceHandler();
+        log.info(deviceHandler.toString());
+
+        new CmAddToList(deviceHandler, airConditioner).execute();
+        new CmAddToList(deviceHandler, new TVDevice()).execute();
+
+        log.info(deviceHandler.toString());
+        CommandsHandler.getInstance().undo();
+        log.info(deviceHandler.toString());
 
 
     }

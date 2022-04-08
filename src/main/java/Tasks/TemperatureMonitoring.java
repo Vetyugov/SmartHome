@@ -1,6 +1,5 @@
 package Tasks;
 
-import Detectors.Types.AbstractSensor;
 import Detectors.Types.AnalogTypeSensor;
 import Detectors.Types.SwitchTypeSensor;
 import Deviсes.AirСonditionerDeviсe;
@@ -32,7 +31,7 @@ public class TemperatureMonitoring extends Thread{
             log.info("Окно " + (windowOpenClose?"Открыто":"Закрыто"));
             if( (temp > 30) && !windowOpenClose){
                 log.info("Температура в комнате больше 30 и окно закрыто");
-                if(airConditioner.getStatus() != Status.IN_WORK){
+                if(airConditioner.getCurrentStatus() != Status.IN_WORK){
                     airConditioner.on();
                 }
                 break;

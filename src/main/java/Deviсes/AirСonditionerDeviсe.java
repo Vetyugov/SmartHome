@@ -7,6 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 public class AirСonditionerDeviсe extends AbstractDevice implements OnOffTypeDevices {
     private Status currentStatus = Status.OFF;
 
+    protected AirСonditionerDeviсe() {
+    }
+
     /**
      * В текущей реализации кондиционер при в ключении сразу начинает охлаждать воздух
      */
@@ -23,7 +26,7 @@ public class AirСonditionerDeviсe extends AbstractDevice implements OnOffTypeD
     }
 
     @Override
-    public Status getStatus() {
+    public Status getCurrentStatus() {
         return currentStatus;
     }
 }
