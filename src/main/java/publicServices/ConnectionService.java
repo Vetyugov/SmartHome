@@ -14,11 +14,6 @@ public class ConnectionService {
     private Connection connection;
 
     private ConnectionService(){
-        /**
-         * 1.Реализовать подключение к БД.
-         * 2.Подключить в pom ломбок, mysqlConnector, SLF4J
-          */
-
         String connectionString = "jdbc:mysql://localhost:3306/smart_home?useUnicode=true&serverTimezone=UTC&useSSL=true&verifyServerCertificate=false";
         log.debug(connectionString);
         try {
