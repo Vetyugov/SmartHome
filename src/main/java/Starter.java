@@ -46,7 +46,7 @@ public class Starter {
         log.info(deviceHandler.toString());
 
         new CmAddToList(deviceHandler, airConditioner).execute();
-        new CmAddToList(deviceHandler, new TVDevice()).execute();
+        new CmAddToList(deviceHandler, new TVDevice(2, Status.OFF)).execute();
 
         log.info(deviceHandler.toString());
         CommandsHandler.getInstance().undo();

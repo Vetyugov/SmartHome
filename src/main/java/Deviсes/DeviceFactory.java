@@ -21,11 +21,11 @@ public class DeviceFactory {
     private DeviceFactory() {
     }
 
-    public AbstractDevice createDevice(DeviceTypes deviceType){
+    public AbstractDevice createDevice(String deviceType){
         AbstractDevice device = null;
         switch (deviceType){
-            case TV -> device = new TVDevice();
-            case AIR_CONDITIONER ->device = new AirСonditionerDeviсe();
+            case DeviceTypes.TV -> device = new TVDevice(-1, Status.OFF);
+            case DeviceTypes.AIR_CONDITIONER ->device = new AirСonditionerDeviсe(-1, Status.OFF);
         }
         return device;
     }

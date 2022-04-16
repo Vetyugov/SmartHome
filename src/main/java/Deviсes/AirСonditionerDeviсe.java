@@ -1,13 +1,19 @@
 package Deviсes;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j
+@Setter
+@Getter
 public class AirСonditionerDeviсe extends AbstractDevice implements OnOffTypeDevices {
-    private Status currentStatus = Status.OFF;
+    private float speed;
 
-    protected AirСonditionerDeviсe() {
+    public AirСonditionerDeviсe(int id, String status) {
+        this.id = id;
+        this.currentStatus = status;
     }
 
     /**
@@ -26,7 +32,7 @@ public class AirСonditionerDeviсe extends AbstractDevice implements OnOffTypeD
     }
 
     @Override
-    public Status getCurrentStatus() {
+    public String getCurrentStatus() {
         return currentStatus;
     }
 }
